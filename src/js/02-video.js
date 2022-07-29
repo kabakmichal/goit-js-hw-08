@@ -1,21 +1,20 @@
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
 
-console.log('podlaczone');
+//console.log('tekst');
 
-// player.addEventListener('blur', () => {
-//     console.log('dziala');
-//     player
-//       .getCurrentTime()
-//       .then(function (seconds) {
-//         // seconds = the current playback position
-//         console.log(seconds);
-//       })
-//       .catch(function (error) {
-//         // an error occurred
-//       });
-// })
-
+player.addEventListener('blur', () => {
+    console.log('dziala');
+    player
+      .getCurrentTime()
+      .then(function (seconds) {
+        // seconds = the current playback position
+        console.log(seconds);
+      })
+      .catch(function (error) {
+        // an error occurred
+      });
+})
 
 ///////////////////////////////////////////////////
 // const iframe = document.querySelector('iframe');
