@@ -1,11 +1,9 @@
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
 
-//console.log('tekst');
+//console.log(player);
 
-player.addEventListener('blur', () => {
-    console.log('dziala');
-    player
+    const time = player
       .getCurrentTime()
       .then(function (seconds) {
         // seconds = the current playback position
@@ -14,7 +12,8 @@ player.addEventListener('blur', () => {
       .catch(function (error) {
         // an error occurred
       });
-})
+
+console.log(time);
 
 ///////////////////////////////////////////////////
 // const iframe = document.querySelector('iframe');
