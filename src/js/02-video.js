@@ -3,9 +3,7 @@ import { throttle } from 'lodash';
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
 
-player.on(
-  'timeupdate',
-  throttle(({ duration, percent, seconds }) => {
+player.on('timeupdate',throttle(({ seconds }) => {
     localStorage.setItem('videoplayer-current-time', `${seconds}`);
   }, 1000)
 );

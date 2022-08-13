@@ -11,6 +11,10 @@ form.addEventListener(
         localStorage.setItem('feedback-form-state', JSON.stringify(input));
 }, 500));
 
+form.removeEventListener('blur',()=> {
+    document.style.background = pink;
+});
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const { elements: { email, message } } = e.currentTarget;
